@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    ont-family: 'Roboto', sans-serif;
+    padding:0;
+}
+header{
+    background-color: rgb(60, 60, 141);
+    color:white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:50px;
+}
+header>p{
+    margin-top:10px;
+}
+.timeline{
+    background-color: rgb(92, 92, 131);
+    color:white;
+    padding:20px 0;
+    overflow-x: hidden;
+
+}
+.timeline>ul{
+    list-style-type: none;
+    width:6px;
+    margin: 0 auto;
+    padding:40px 0;
+    background-color: whitesmoke;
+    border-radius: 3px;
+}
+.timeline>ul>li{
+    position: relative;
+    width:400px;
+    text-align: justify;
+    margin:40px 0;
+}
+.timeline>ul>li>div{
+    padding: 10px;
+    position: relative;
+    background-color: rgb(60, 60, 141);
+    visibility: hidden;
+}
+
+.timeline>ul>li>div>h3{
+    margin-bottom: 10px;
+}
+.timeline>ul>li:nth-child(odd){
+    left:40px;
+}
+.timeline>ul>li:nth-child(even){
+    left:-434px;
+}
+.timeline>ul>li:nth-child(odd)::after{
+    content:"";
+    position:absolute;
+    border:10px solid rgb(60, 60, 141);
+    border-radius: 50%;
+    left:-47px;
+    bottom: 5px;
+    
+}
+.timeline>ul>li:nth-child(even)::after{
+    content:"";
+    position:absolute;
+    border:10px solid rgb(60, 60, 141);
+    border-radius: 50%;
+    left:427px;
+    bottom: 5px;
+}
+.timeline>ul>li:nth-child(odd)>div::after{
+    content:"";
+    position:absolute;
+    border:10px solid;
+    border-color: transparent rgb(60, 60, 141) transparent transparent ;
+    left:-20px; 
+    bottom: 5px;
+    animation: animodd 1s;
+ 
+}
+.timeline>ul>li:nth-child(even)>div::after{
+    content:"";
+    position:absolute;
+    border:10px solid;
+    left:400px;
+    border-color: transparent transparent transparent rgb(60, 60, 141);
+    bottom: 5px;
+    animation: animeven 1s;
+}
+/*.timeline>ul>li:nth-child(odd)>div{
+    animation: animodd 1s;
+}
+.timeline>ul>li:nth-child(even)>div{
+    animation: animeven 1s;
+}*/
+.timeline>ul>li>div.showodd{
+    animation: animodd 1s;
+    visibility: visible;
+}
+.timeline>ul>li>div.showeven{
+    animation: animeven 1s;
+    visibility: visible;
+}
+@keyframes animodd {
+    0%{transform: translate(800px,0);}
+    100%{transform: translate(0,0);}
+}
+@keyframes animeven {
+    0%{transform: translate(-800px,0);}
+    100%{transform: translate(0,0);}
+}

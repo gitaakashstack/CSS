@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    line-height: 1.4;
+}
+.container{
+    display:flex;
+    height:100vh;
+    width:100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+.container::before{
+    content:"";
+    background: url(marcos-paulo-prado-XZolOONlk68-unsplash.jpg) center/cover no-repeat;
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: -1;
+
+}
+p{
+    width: 90%;
+}
+#hammenu{
+    position:fixed;
+    top:10px;
+    left:10px;
+    cursor:pointer;
+    margin-left: 15px;
+    z-index: 3;
+}
+#hammenu>div{
+    width:25px;
+    height:5px;
+    margin:5px 0;
+    background-color: red;
+    transition:transform 0.5s;
+}
+.cross>div:nth-child(1){
+    transform: translateY(10px) rotate(135deg);
+    
+}
+.cross>div:nth-child(3){
+    transform: translateY(-10px) rotate(-135deg) ;
+}
+.cross>div:nth-child(2){
+    transform:translateX(-50px);
+}
+
+.menu{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left:0px;
+    height: 100vh;
+    width:100%;
+    overflow: hidden;
+    z-index: 2;
+    color:white;
+}
+.menu>div:nth-child(1){
+    opacity: 0;
+    height: 200vw;
+    width:200vw;
+    display: flex;
+    background: rgba(13, 56, 121,0.7) center/cover;
+    flex:none;
+    justify-content: center;
+    border-radius: 50%;
+    align-items: center;
+    transform: scale(0,0);
+    transition: all 0.5s;
+}
+
+.menu>div>ul{
+    list-style-type: none;
+}
+.menu >div>ul>li{
+    margin:10px 0;
+    text-align: center;
+    font-size: 1.3rem;
+}
+@media (max-width: 768px){
+    .menu>div:nth-child(1){
+
+        height: 400vw;
+        width:400vw;
+    }
+
+}
+/*.menu{
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(13, 56, 121,0.7) center/cover;
+    position: absolute;
+    top: 0px;
+    left:0px;
+    height: 100vh;
+    width:100%;
+    overflow: hidden;
+    z-index: 1;
+    color:white;
+}
+@keyframes animate1 {
+    0%{opacity:0; transform:scale(0,0)}
+    100%{opacity:1;transform:scale(1,1)}
+    
+}
+@keyframes animate2 {
+    0%{opacity:1; transform:scale(1,1)}
+    100%{opacity:0;transform:scale(0,0)}
+    
+}*/

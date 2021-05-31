@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+main{
+    background-color: coral;
+    height:300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    background-color: rgb(240, 219, 219);
+}
+nav>ul{
+    display: flex;
+    list-style-type: none;
+}
+nav>ul>li{
+    position: relative;
+}
+a{
+    text-decoration: none;
+}
+nav>ul>li>a,.dropdown{
+    display: inline-block;
+    padding:15px;/*padding is given to a tag instead of ul or li selector to make entire block clickable*/
+    color:black;
+}
+nav>ul>li:hover{
+    background-color: rgb(248, 150, 114);
+}
+nav>ul>li:hover>ul{
+    display: block;
+}
+nav>ul>li>ul{
+    list-style-type: none;
+    position:absolute;
+    left:0;
+    top:100%;
+    display:none;
+    background-color:rgb(240, 219, 219) ;
+}
+nav>ul>li>ul>li{
+
+}
+nav>ul>li>ul>li>a{
+    display: inline-block;
+    color:black;
+    width:250px;/*width is given to a tag instead of ul or li selector to make entire block clickable*/
+    padding:20px 10px;
+}
+nav>ul>li>ul>li>a>span{
+    float:right;
+}
+nav>ul>li:hover>ul>li:hover{
+    background-color:rgb(184, 165, 165) ;
+}

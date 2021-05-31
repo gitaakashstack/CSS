@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+@keyframes animate_h1 {
+    from{
+        transform: translateY(-600px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+@keyframes animate_p {
+    from{
+        position: relative;
+        left:-1800px;
+    }
+    to{
+        position: relative;
+        left:0px;
+    }
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height:100vh;
+}
+a{
+    text-decoration: none;
+}
+p{
+    margin:5px 10px 30px;
+}
+header p{
+    
+    animation: animate_p 3s;
+}
+header h1{
+    animation: animate_h1 3s;
+}
+
+.btns{
+    cursor:pointer;
+}
+.nextbtn{
+    padding:15px;
+    color:black;
+    border-radius: 5px;
+    background-color :whitesmoke;
+    transition:color 1s;
+    transition: background-color,color 1s;
+    
+}
+.nextbtn:hover{
+    background-color: black;
+    color:white;
+}
+i{
+    font-size: 20px;
+}
+.prevbtn{
+    padding:15px;
+    margin-right:10px;
+    border-radius: 5px;
+    color:white;
+    background-color :black;
+    transition:color  1s;
+    transition: background-color 1s;
+}
+.prevbtn:hover{
+    background-color:whitesmoke;
+    color:black;
+}
+header>.container{
+    background-color: rgb(37, 101, 219);
+}
+section >.container:nth-child(1){
+    background-color: rgb(11, 221, 123);
+}
+section > .container:nth-child(2){
+    background-color: rgb(219, 177, 37);
+}
+section > .container:nth-child(3){
+    background-color: rgb(236, 78, 78);
+}
+footer>.container{
+    background-color: rgb(224, 121, 185);
+}

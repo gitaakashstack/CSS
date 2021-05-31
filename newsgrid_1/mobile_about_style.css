@@ -1,0 +1,34 @@
+nav{
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap:20px;
+}
+nav>.icons{
+    display: none;
+}
+section{
+    grid-template-columns: 3fr 1fr;
+    padding: 30px;
+}
+section>article{
+    grid-column: 1/2;
+}
+footer{
+    grid-template-columns: 1fr;
+}
+footer>main{
+    grid-column: 1/2;
+}
+@media (max-width:600px)
+{
+    section{
+        grid-template-columns: 1fr;
+    }
+    footer>main{
+        grid-template-columns: 1fr;
+    }
+    footer>main>div:nth-child(5){
+        grid-column: 1/2;
+    }
+    
+}
